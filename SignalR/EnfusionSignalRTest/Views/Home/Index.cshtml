@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+@* @section Scripts {
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script type="text/javascript">
+        
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/hub", signalR.HttpTransportType.LongPolling)
+            .configureLogging(signalR.LogLevel.Information)
+            .withHubProtocol(new signalR.JsonHubProtocol())
+            .build();
+
+        let count = 0;
+
+        async function start() {
+            try {
+                await connection.start();
+                console.log("SignalR Connected.");
+            } catch (err) {
+                console.log(err);
+                setTimeout(start, 5000);
+            }
+            setInterval(function () {
+                count++;
+                if (count < 10) { 
+                connection.send("Ping", "Data " + count);
+                }
+            }, 1000);
+        };
+
+        connection.onclose(async () => {
+            await start();
+        });
+
+        connection.on("Pong", (arg) => { 
+            console.log(arg);
+        });
+
+        // Start the connection.
+        start();
+    
+    </script>
+} *@

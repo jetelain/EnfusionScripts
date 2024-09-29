@@ -1,0 +1,4 @@
+PMAD_SignalREntity {
+ coords 2336.774 74.021 1798.736
+ m_baseUri "http://localhost:5262/hub"
+}
